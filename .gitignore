@@ -56,3 +56,5 @@ tmtags
 .rbx
 
 /tmp
+
+.byebug_history

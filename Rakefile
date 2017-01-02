@@ -79,10 +79,10 @@ namespace :spec do
   task :mongoid => [:mongoid2, :mongoid3, :mongoid4, :mongoid5]
 
   desc "Run Tests against rails 3 & 4 & 4.1 & 4.2 & 5.0"
-  task :rails => [:rails3, :rails4, :rails41, :rails42, :rails50]
+  task :rails => [:rails50]
 
   desc "Run Tests against all ORMs"
-  task :all => [:rails, :mongoid]
+  task :all => [:rails]
 
 end
 

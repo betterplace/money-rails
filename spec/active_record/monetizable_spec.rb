@@ -876,12 +876,9 @@ if defined? ActiveRecord
         expect(product.price).to eq(nil)
       end
 
-      it "sets monetized attribute to 0 when given a blank value" do
-        currency = product.price.currency
+      it "does not set monetized attribute to 0 when given a blank value not allowing allow_nil" do
         product.write_monetized :price, :price_cents, nil, false, nil, {}
-
-        expect(product.price.amount).to eq(0)
-        expect(product.price.currency).to eq(currency)
+        expect(product.price.amount).to eq(30)
       end
 
       it "does not memoize monetized attribute's value if currency is read-only" do
